@@ -52,8 +52,7 @@ tuple<double, double, double> fibonacci(double (*func)(double), double a, double
     } else {
         a = x1;
     }
-    tuple<double, double, double> res((b + a) / 2, (b - a) / 2 , S);
-    return res;
+    return {(b + a) / 2, (b - a) / 2 , S};
 }
 
 double golden_ratio = (sqrt(5) + 1) / 2;
@@ -82,8 +81,7 @@ tuple<double, double, double> golden_section_method(double (*func)(double), doub
             N++;
         }
     }
-    tuple<double, double, double> res((b + a) / 2, (b - a) / 2 , N);
-    return res;
+    return {(b + a) / 2, (b - a) / 2 , N};
 }
 
 
@@ -99,8 +97,7 @@ tuple<double, double, double> dih(double (*func)(double), double a, double b, do
             b = x2;
         }
     }
-    tuple<double, double, double> res((b + a) / 2, (b - a) / 2 , N);
-    return res;
+    return {(b + a) / 2, (b - a) / 2 , N};
 }
 
 int32_t main() {
